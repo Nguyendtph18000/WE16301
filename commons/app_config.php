@@ -5,5 +5,6 @@ const ADMIN_ASSETS = BASE_URL . 'public/admin/';
 const PUBLIC_ASSETS = ADMIN_ASSETS . 'assets/images/' ;
 
 const HOME_ASSESTS = BASE_URL . 'public/homepage/assets/';
+const PUBLIC_HOME_ASSETS = HOME_ASSESTS . 'images/';
 
 ?>

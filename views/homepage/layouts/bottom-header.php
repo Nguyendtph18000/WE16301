@@ -80,7 +80,7 @@
                            <a href="#">TÀI KHOẢN</a>
                            <ul>
                               <li>
-                                 <a href="admin/dashboard.html">Dashboard</a>
+                                 <a href="<?=BASE_URL?>cp-admin/dashboard">Dashboard</a>
                               </li>
                               <li class="menu-item-has-children">
                                  <a href="#">Người Dùng</a>

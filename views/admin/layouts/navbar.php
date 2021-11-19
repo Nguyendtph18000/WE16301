@@ -3,7 +3,7 @@
                 <div id="dashboard-Navigation" class="slick-nav"></div>
                 <div id="navigation" class="navigation-container">
                     <ul>
-                        <li class="active-menu"><a href="dashboard.html"><i class="far fa-chart-bar"></i> Bảng điều khiển</a></li>
+                        <li class="active-menu"><a href="<?=BASE_URL?>cp-admin/dashboard"><i class="far fa-chart-bar"></i> Bảng điều khiển</a></li>
                         <li><a><i class="fas fa-user"></i>Người dùng</a>
                             <ul>
                                 <li>
@@ -22,8 +22,7 @@
                             <a><i class="fas fa-hotel"></i></i>Danh sách tour</a>
                             <ul>
                                 <li><a href="<?=BASE_URL?>cp-admin/tour-active">Hoạt động </a></li>
-                                <li><a href="db-package-pending.html">Chưa giải quyết</a></li>
-                                <li><a href="db-package-expired.html">Hết hạn</a></li>
+                                <li><a href="<?=BASE_URL?>cp-admin/tour-expired">Hết hạn</a></li>
                             </ul>   
                         </li>
                         <li><a href="db-booking.html"><i class="fas fa-ticket-alt"></i> Đặt chỗ & yêu cầu</a></li>

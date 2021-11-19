@@ -74,110 +74,7 @@
             </div>
          </div>
          <!-- search search field html end -->
-         <section class="destination-section">
-            <div class="container">
-               <div class="section-heading">
-                  <div class="row align-items-end">
-                     <div class="col-lg-7">
-                        <h5 class="dash-style">ĐIỂM ĐẾN PHỔ BIẾN</h5>
-                        <h2>ĐIỂM ĐẾN HÀNG ĐẦU</h2>
-                     </div>
-                     <div class="col-lg-5">
-                        <div class="section-disc">
-                              <!-- Aperiam sociosqu urna praesent, tristique, corrupti condimentum asperiores platea ipsum ad arcu. Nostrud. Aut nostrum, ornare quas provident laoreet nesciunt. -->
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="destination-inner destination-three-column">
-                  <div class="row">
-                     <div class="col-lg-7">
-                        <div class="row">
-                           <div class="col-sm-6">
-                              <div class="desti-item overlay-desti-item">
-                                 <figure class="desti-image">
-                                    <img src="<?=HOME_ASSESTS?>/images/img1.jpg" alt="">
-                                 </figure>
-                                 <div class="meta-cat bg-meta-cat">
-                                    <a href="#">THAILAND</a>
-                                 </div>
-                                 <div class="desti-content">
-                                    <h3>
-                                       <a href="#">Disney Land</a>
-                                    </h3>
-                                    <div class="rating-start" title="Rated 5 out of 4">
-                                       <span style="width: 53%"></span>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-sm-6">
-                              <div class="desti-item overlay-desti-item">
-                                 <figure class="desti-image">
-                                    <img src="<?=HOME_ASSESTS?>/images/img2.jpg" alt="">
-                                 </figure>
-                                 <div class="meta-cat bg-meta-cat">
-                                    <a href="#">NORWAY</a>
-                                 </div>
-                                 <div class="desti-content">
-                                    <h3>
-                                       <a href="#">Besseggen Ridge</a>
-                                    </h3>
-                                    <div class="rating-start" title="Rated 5 out of 5">
-                                       <span style="width: 100%"></span>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-5">
-                        <div class="row">
-                           <div class="col-md-6 col-xl-12">
-                              <div class="desti-item overlay-desti-item">
-                                 <figure class="desti-image">
-                                    <img src="<?=HOME_ASSESTS?>/images/img3.jpg" alt="">
-                                 </figure>
-                                 <div class="meta-cat bg-meta-cat">
-                                    <a href="#">NEW ZEALAND</a>
-                                 </div>
-                                 <div class="desti-content">
-                                    <h3>
-                                       <a href="#">Oxolotan City</a>
-                                    </h3>
-                                    <div class="rating-start" title="Rated 5 out of 5">
-                                       <span style="width: 100%"></span>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-6 col-xl-12">
-                              <div class="desti-item overlay-desti-item">
-                                 <figure class="desti-image">
-                                    <img src="<?=HOME_ASSESTS?>/images/img4.jpg" alt="">
-                                 </figure>
-                                 <div class="meta-cat bg-meta-cat">
-                                    <a href="#">SINGAPORE</a>
-                                 </div>
-                                 <div class="desti-content">
-                                    <h3>
-                                       <a href="#">Marina Bay Sand City</a>
-                                    </h3>
-                                    <div class="rating-start" title="Rated 5 out of 4">
-                                       <span style="width: 60%"></span>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="btn-wrap text-center">
-                     <a href="#" class="button-primary">ĐIỂM ĐẾN KHÁC</a>
-                  </div>
-               </div>
-            </div>
-         </section>
+         
          <!-- Home packages section html start -->
          <section class="package-section">
             <div class="container">
@@ -192,153 +89,61 @@
                </div>
                <div class="package-inner">
                   <div class="row">
-                     <div class="col-lg-4 col-md-6">
-                        <div class="package-wrap">
-                           <figure class="feature-image">
-                              <a href="#">
-                                 <img src="<?=HOME_ASSESTS?>/images/img5.jpg" alt="">
-                              </a>
-                           </figure>
-                           <div class="package-price">
-                              <h6>
-                                 <span>$1,900 </span> / per person
-                              </h6>
-                           </div>
-                           <div class="package-content-wrap">
-                              <div class="package-meta text-center">
-                                 <ul>
-                                    <li>
-                                       <i class="far fa-clock"></i>
-                                       7D/6N
-                                    </li>
-                                    <li>
-                                       <i class="fas fa-user-friends"></i>
-                                       People: 5
-                                    </li>
-                                    <li>
-                                       <i class="fas fa-map-marker-alt"></i>
-                                       Malaysia
-                                    </li>
-                                 </ul>
+                  <div><?php var_dump($tours) ?></div>
+                     
+                     <?php foreach($tours as $t): ?>
+                        <div class="col-lg-4 col-md-6">
+                           <div class="package-wrap" style="box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.08);">
+                              <figure class="feature-image">
+                                 <a href="<?=BASE_URL?>tour-detail&&id=<?=$t['id']?>">
+                                    <img src="<?=PUBLIC_HOME_ASSETS?><?=$t['image']?>" alt="">
+                                 </a>
+                              </figure>
+                              <div class="package-price">
+                                 <h6>
+                                    <span><?=$t['price']?> </span> / Người
+                                 </h6>
                               </div>
-                              <div class="package-content">
-                                 <h3>
-                                    <a href="#">Sunset view of beautiful lakeside resident</a>
-                                 </h3>
-                                 <div class="review-area">
-                                    <span class="review-text">(25 reviews)</span>
-                                    <div class="rating-start" title="Rated 5 out of 5">
-                                       <span style="width: 60%"></span>
-                                    </div>
+                              <div class="package-content-wrap">
+                                 <div class="package-meta text-center">
+                                    <ul>
+                                       <li>
+                                          <i class="far fa-clock"></i>
+                                          <?=$t['days']?>N / <?=$t['nights']?>Đ
+                                       </li>
+                                       <li>
+                                          <i class="fas fa-user-friends"></i>
+                                          Số người: <?=$t['people']?>
+                                       </li>
+                                       <li>
+                                          <i class="fas fa-map-marker-alt"></i>
+                                          <?=$t['destination']?>
+                                       </li>
+                                    </ul>
                                  </div>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
-                                 <div class="btn-wrap">
-                                    <a href="#" class="button-text width-6">Đặt ngay bây giờ<i class="fas fa-arrow-right"></i></a>
-                                    <a href="#" class="button-text width-6">Danh sách yêu thích<i class="far fa-heart"></i></a>
+                                 <div class="package-content">
+                                    <h3>
+                                       <a href="<?=BASE_URL?>tour-detail&&id=<?=$t['id']?>"><?=$t['title']?></a>
+                                    </h3>
+                                    <!-- <div class="review-area">
+                                       <span class="review-text">(22 reviews)</span>
+                                       <div class="rating-start" title="Rated 5 out of 5">
+                                          <span style="width: 80%"></span>
+                                       </div>
+                                    </div> -->
+                                    <p><?=$t['description'] ?></p>
+                                    <div class="btn-wrap">
+                                       <a href="#" class="button-text width-12">Đặt ngay bây giờ<i class="fas fa-arrow-right"></i></a>
+                                       <!-- <a href="#" class="button-text width-6">Danh sách yêu thích<i class="far fa-heart"></i></a> -->
+                                    </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6">
-                        <div class="package-wrap">
-                           <figure class="feature-image">
-                              <a href="#">
-                                 <img src="<?=HOME_ASSESTS?>/images/img6.jpg" alt="">
-                              </a>
-                           </figure>
-                           <div class="package-price">
-                              <h6>
-                                 <span>$1,230 </span> / per person
-                              </h6>
-                           </div>
-                           <div class="package-content-wrap">
-                              <div class="package-meta text-center">
-                                 <ul>
-                                    <li>
-                                       <i class="far fa-clock"></i>
-                                       5D/4N
-                                    </li>
-                                    <li>
-                                       <i class="fas fa-user-friends"></i>
-                                       People: 8
-                                    </li>
-                                    <li>
-                                       <i class="fas fa-map-marker-alt"></i>
-                                       Canada
-                                    </li>
-                                 </ul>
-                              </div>
-                              <div class="package-content">
-                                 <h3>
-                                    <a href="#">Experience the natural beauty of island</a>
-                                 </h3>
-                                 <div class="review-area">
-                                    <span class="review-text">(17 reviews)</span>
-                                    <div class="rating-start" title="Rated 5 out of 5">
-                                       <span style="width: 100%"></span>
-                                    </div>
-                                 </div>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
-                                 <div class="btn-wrap">
-                                    <a href="#" class="button-text width-6">Đặt ngay bây giờ<i class="fas fa-arrow-right"></i></a>
-                                    <a href="#" class="button-text width-6">Danh sách yêu thích<i class="far fa-heart"></i></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4 col-md-6">
-                        <div class="package-wrap">
-                           <figure class="feature-image">
-                              <a href="#">
-                                 <img src="<?=HOME_ASSESTS?>/images/img7.jpg" alt="">
-                              </a>
-                           </figure>
-                           <div class="package-price">
-                              <h6>
-                                 <span>$2,000 </span> / per person
-                              </h6>
-                           </div>
-                           <div class="package-content-wrap">
-                              <div class="package-meta text-center">
-                                 <ul>
-                                    <li>
-                                       <i class="far fa-clock"></i>
-                                       6D/5N
-                                    </li>
-                                    <li>
-                                       <i class="fas fa-user-friends"></i>
-                                       People: 6
-                                    </li>
-                                    <li>
-                                       <i class="fas fa-map-marker-alt"></i>
-                                       Portugal
-                                    </li>
-                                 </ul>
-                              </div>
-                              <div class="package-content">
-                                 <h3>
-                                    <a href="#">Vacation to the water city of Portugal</a>
-                                 </h3>
-                                 <div class="review-area">
-                                    <span class="review-text">(22 reviews)</span>
-                                    <div class="rating-start" title="Rated 5 out of 5">
-                                       <span style="width: 80%"></span>
-                                    </div>
-                                 </div>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
-                                 <div class="btn-wrap">
-                                    <a href="#" class="button-text width-6">Đặt ngay bây giờ<i class="fas fa-arrow-right"></i></a>
-                                    <a href="#" class="button-text width-6">Danh sách yêu thích<i class="far fa-heart"></i></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                     <?php endforeach ?>
                   </div>
                   <div class="btn-wrap text-center">
-                     <a href="#" class="button-primary">XEM TẤT CẢ CÁC GÓI</a>
+                     <a href="<?=BASE_URL?>tour-packages" class="button-primary">XEM TẤT CẢ CÁC GÓI</a>
                   </div>
                </div>
             </div>
@@ -351,9 +156,9 @@
                <div class="section-heading text-center">
                   <div class="row">
                      <div class="col-lg-8 offset-lg-2">
-                        <h5 class="dash-style">DU LỊCH BẰNG HOẠT ĐỘNG</h5>
+                        <h5 class="dash-style">HOẠT ĐỘNG DU LỊCH</h5>
                         <h2>CUỘC PHIÊU LƯU VÀ HOẠT ĐỘNG</h2>
-                        <!-- <p>Niềm vui êm dịu bạn gặp phải yếu tố thung lũng của cơ thể nơi mà sự thật là một cái gì đó tâng bốc, tâng bốc, ghét làm hài lòng. Huấn luyện vì từ chối khóa học của anh ấy? Xin hãy quan tâm đến chúng tôi nhiều nhất.</p> -->
+                       
                      </div>
                   </div>
                </div>
@@ -466,84 +271,36 @@
                </div>
                <div class="special-inner">
                   <div class="row">
+                     <div><?php var_dump($tours_discount) ?></div>
+                     <?php foreach($tours_discount as $td): ?>
                      <div class="col-md-6 col-lg-4">
                         <div class="special-item">
                            <figure class="special-img">
-                              <img src="<?=HOME_ASSESTS?>/images/img9.jpg" alt="">
+                              <img src="<?=PUBLIC_HOME_ASSETS?><?=$td['image']?>" alt="">
                            </figure>
                            <div class="badge-dis">
                               <span>
-                                 <strong>20%</strong>
-                                 off
+                                 <strong> - <?=$td['discount']?>%</strong>
+                                 
                               </span>
                            </div>
                            <div class="special-content">
                               <div class="meta-cat">
-                                 <a href="#">CANADA</a>
+                                 <a href="#"><?=$td['destination']?></a>
                               </div>
                               <h3>
-                                 <a href="#">Trải nghiệm vẻ đẹp tự nhiên của sông băng</a>
+                                 <a href="#"><?=$td['title']?></a>
                               </h3>
                               <div class="package-price">
-                                 Price:
-                                 <del>$1500</del>
-                                 <ins>$1200</ins>
+                                 Giá:
+                                 <del><?=$td['price']?>đ</del>
+                                 <ins><?php echo $td['price']*$td['discount']/100?>đ</ins>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-6 col-lg-4">
-                        <div class="special-item">
-                           <figure class="special-img">
-                              <img src="<?=HOME_ASSESTS?>/images/img10.jpg" alt="">
-                           </figure>
-                           <div class="badge-dis">
-                              <span>
-                                 <strong>15%</strong>
-                                 off
-                              </span>
-                           </div>
-                           <div class="special-content">
-                              <div class="meta-cat">
-                                 <a href="#">NEW ZEALAND</a>
-                              </div>
-                              <h3>
-                                 <a href="#">Đi bộ đến địa điểm cắm trại trên núi</a>
-                              </h3>
-                              <div class="package-price">
-                                 Price:
-                                 <del>$1300</del>
-                                 <ins>$1105</ins>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-6 col-lg-4">
-                        <div class="special-item">
-                           <figure class="special-img">
-                              <img src="<?=HOME_ASSESTS?>/images/img11.jpg" alt="">
-                           </figure>
-                           <div class="badge-dis">
-                              <span>
-                                 <strong>15%</strong>
-                                 off
-                              </span>
-                           </div>
-                           <div class="special-content">
-                              <div class="meta-cat">
-                                 <a href="#">MALAYSIA</a>
-                              </div>
-                              <h3>
-                                 <a href="#">Cảnh hoàng hôn của thành phố ven hồ xinh đẹp</a>
-                              </h3>
-                              <div class="package-price">
-                                 Price:
-                                 <del>$1800</del>
-                                 <ins>$1476</ins>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                     <?php endforeach ?>
+                     
                   </div>
                </div>
             </div>
@@ -819,38 +576,14 @@
          <!--  contact details html end -->
       </main>
       <?php include_once "./views/homepage/layouts/footer.php" ?>
-      <a id="backTotop" href="#" class="to-top-icon">
+      <!-- <a id="backTotop" href="#" class="to-top-icon">
          <i class="fas fa-chevron-up"></i>
-      </a>
-      <!-- custom search field html -->
-         <div class="header-search-form">
-            <div class="container">
-               <div class="header-search-container">
-                  <form class="search-form" role="search" method="get" >
-                     <input type="text" name="s" placeholder="Enter your text...">
-                  </form>
-                  <a href="#" class="search-close">
-                     <i class="fas fa-times"></i>
-                  </a>
-               </div>
-            </div>
-         </div>
-      <!-- header html end -->
+      </a> -->
+      
    </div>
 
    <!-- JavaScript -->
-   <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="<?=HOME_ASSESTS?>js/jquery.js"></script>
-   <script src="../../../cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-   <script src="<?=HOME_ASSESTS?>vendors/bootstrap/js/bootstrap.min.js"></script>
-   <script src="<?=HOME_ASSESTS?>vendors/jquery-ui/jquery-ui.min.js"></script>
-   <script src="<?=HOME_ASSESTS?>vendors/countdown-date-loop-counter/loopcounter.js"></script>
-   <script src="<?=HOME_ASSESTS?>js/jquery.counterup.js"></script>
-   <script src="<?=HOME_ASSESTS?>vendors/modal-video/jquery-modal-video.min.js"></script>
-   <script src="<?=HOME_ASSESTS?>vendors/masonry/masonry.pkgd.min.js"></script>
-   <script src="<?=HOME_ASSESTS?>vendors/lightbox/dist/js/lightbox.min.js"></script>
-   <script src="<?=HOME_ASSESTS?>vendors/slick/slick.min.js"></script>
-   <script src="<?=HOME_ASSESTS?>js/jquery.slicknav.js"></script>
-   <script src="<?=HOME_ASSESTS?>js/custom.min.js"></script>
+   <?php include_once "./views/homepage/layouts/js.php" ?>
 </body>
 
 </html>

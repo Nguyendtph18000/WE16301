@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2021 at 02:13 PM
+-- Generation Time: Nov 19, 2021 at 03:13 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -48,7 +48,7 @@ INSERT INTO `user` (`id`, `username`, `password`, `name`, `phone`, `email`, `add
 (1, 'quanntph18231', '', 'NTQ2002222', 964540635, 'qnt@gmail.com', 'Canh Nậu Thạch Thất Hà Nội', 123456789, 'testi-img3-150x150.jpg', 0),
 (26, 'storeomo', '', 'Quân Nguyễn Trung', 964540635, 'ntq25012002@gmail.com', 'Vietnam', 1203434744, 'testi-img1-150x150.jpg', 0),
 (27, 'storeomo', '$2y$10$nx34jPoe9MXE4VMm75vxkOARaugHTbdUrjde6Ahw.ElWeALNVBr3m', 'Quân Nguyễn Trung', 964540635, 'ntq25012002@gmail.com', 'Vietnam', 111111111, 'bg.jpg', 1),
-(29, 'nhom7', '$2y$10$CxuURF0ArzkOGVqnTDjRNe3jH3npFC3bBdk.yDuiEni13GVq91JOW', 'Quân Nguyễn Trung', 964540635, 'ntq25012002@gmail.com', 'Vietnam', 1203434744, 'testi-img1-150x150.jpg', 0);
+(33, 'storeomo', '$2y$10$9iSk./k5EVO9KiqThbFBeu5ZME1BL.FR9BZH5fylh9WCjEKkiIPkS', 'Quân Nguyễn Trung', 964540635, 'ntq25012002@gmail.com', 'Vietnam', 1203434744, 'testi-img1-150x150.jpg', 1);
 
 --
 -- Indexes for dumped tables
@@ -68,7 +68,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,73 +1,6 @@
 @charset "UTF-8";
-/*
-	[Master Stylesheet]
-	Theme Name: Travele
-	Theme URI: https://themeforest.net/user/keonthemes
-	Description: Travele is an expressive, virtuous, user friendly and powerful HTML 5 Template suitable for any travel or tour agency, hotel, flight websites. Easy to use & customize, code & design quality, responsive theme, creative sliders, flexibility, many of premade pages, multiple portfolio options, responsive blog options and quick support – these are the outstanding features and quality to make you stand out from the crowd. This template boasts clean features, modern and unique design which make your website more beautiful. This template was built in Bootstrap 4, HTML5 and CSS3.
-	Author: Keon Themes
-	Author URI: https://themeforest.net/user/keonthemes
-	Version: 1.0.0
-	Primary use: travel
-*/
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1. Normalize
-2. Typography
-3. Table
-4. Forms
-5. Buttons
-6. Pagination
-7. Clearing
-8. Main Header
-9. Home front section
-	* Home page two
-	* Home slider section
-	* Home travel search section
-	* Home destination section
-	* Home package section 
-	* Home callback section 
-	* Home activity section  
-	* Home Travel choice section
-	* Home gallery section 
-	* Home clinet section  
-	* Home subscribe form section    
-	* Home blog section
-	* Home testimonial section  
-	* Home contact section  
-10. main Footer
-11. pages
-	* About Pages
-	* Destination Pages
-	* Package Tour Pages
-	* Package Offer Pages
-	* Package Detail Pages
-	* Service Pages
-	* Gallery Pages
-	* Search Pages
-	* 404 Pages
-	* Comming Soon Pages
-	* Blog Archive Pages
-	* Blog Single Pages
-	* Contact Pages
-	* FAQ Pages
-	* Shop Pages
-		*Product Right
-		*Product Detail
-		*Product Cart 
-		*Product Checkout
-	* Tour Cart Page
-	* Booking Page
-	* Comfirmation Page
-12. compatibility
-    * Widget Siderbar
-
----------------------------------------------------------------- */
-/*--------------------------------------------------------------
->>> Normalize
-----------------------------------------------------------------*/
 html {
-  line-height: 1.15;
+  line-height: 1.2;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -2753,7 +2686,7 @@ input[type=submit]:focus {
 }
 
 .package-wrap {
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.08);
   margin-bottom: 24px;
   position: relative;
 }
@@ -2852,8 +2785,8 @@ input[type=submit]:focus {
 .package-meta {
   background-color: #0791BE;
   margin-bottom: 25px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
   margin-top: -25px;
   padding: 15px 0;
   position: relative;

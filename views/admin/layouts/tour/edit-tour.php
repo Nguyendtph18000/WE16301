@@ -28,11 +28,11 @@
                             <div class="custom-field-wrap">
                                 <div class="form-group">
                                     <label>Tiêu đề</label>
-                                    <input type="text" name="title">
+                                    <input type="text" name="title" value="<?=$oldData['title']?>">
                                 </div>
                                 <div class="form-group">
                                     <label>Mô tả</label>
-                                    <textarea name="description"></textarea>
+                                    <textarea name="description" ><?=$oldData['description']?></textarea>
                                 </div>
                             </div>
                         </div>
@@ -43,13 +43,13 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Điểm đến</label>
-                                            <input type="text" name="destination">
+                                            <input type="text" name="destination" value="<?=$oldData['destination']?>">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label>Số lượng người</label>
-                                            <input type="number" name="size" placeholder="Số lượng người">
+                                            <input type="number" name="size" placeholder="Số lượng người" value="<?=$oldData['people']?>">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -57,12 +57,12 @@
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <input type="number" name="days" placeholder="Ngày">
+                                                    <input type="number" name="days" placeholder="Ngày" value="<?=$oldData['days']?>">
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <input type="number" name="nights" placeholder="Đêm">
+                                                    <input type="number" name="nights" placeholder="Đêm" value="<?=$oldData['nights']?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -71,31 +71,32 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label>Giá</label>
-                                            <input type="text" name="price">
+                                            <input type="text" name="price" value="<?=$oldData['price']?>">
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label>Giảm giá</label>
-                                            <input type="text" name="discount">
+                                            <input type="text" name="discount" value="<?=$oldData['discount']?>">
                                         </div>
                                     </div>
-                                    <!-- <div class="col-sm-4">
+                                    <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label>Loại</label>
-                                            <select>
-                                                <option value="1">Người lớn</option>
-                                                <option value="2">trẻ em</option>
-                                                <option value="3">Cặp đôi</option>
+                                            <label>Trạng thái</label>
+                                            <select name="status">
+                                                <option selected value="<?=$oldData['status']?>"><?php echo $oldData['status']==0?"Hoạt động":"Hết hạn"; ?></option>
+                                                <option value="1">Hoạt động</option>
+                                                <option value="1">Hết hạn</option>
                                             </select>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="dashboard-box">
                             <h4>Hình ảnh</h4>
+                            <img src="<?=PUBLIC_HOME_ASSETS?><?=$oldData['image']?>" alt="">
                             <div class="custom-field-wrap">
                                 <div class="dragable-field">
                                     <div class="dragable-field-inner">
@@ -112,6 +113,7 @@
                         </div>
                         <div class="dashboard-box">
                             <h4>Hình ảnh chi tiết</h4>
+                            <img src="<?=PUBLIC_HOME_ASSETS?><?=$oldData['detail_photo']?>" alt="">
 
                                 <div class="custom-field-wrap">
                                     <div class="dragable-field">
